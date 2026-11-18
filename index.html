@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152f">
+  <title>Un universo para ti 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" src="musica-instrumental.mp3" loop preload="none"></audio>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Reproducir música">
+    <span class="music-icon">♫</span><span id="musicLabel">Música</span>
+  </button>
+
+  <main>
+    <section class="scene intro active" id="intro">
+      <div class="intro-stars" id="introStars"></div>
+      <div class="tiny-sun"></div>
+      <p class="eyebrow">18 · 11 · 2026</p>
+      <h1>De todos los universos<br><em>posibles...</em></h1>
+      <p class="intro-line">qué bonito coincidir en este.</p>
+      <button class="primary-btn" id="beginBtn">Entrar a nuestro universo <span>✦</span></button>
+      <p class="microcopy">Una pequeña galaxia hecha para ti</p>
+    </section>
+
+    <section class="scene galaxy" id="galaxy">
+      <div class="nebula"></div>
+      <div class="galaxy-core"></div>
+      <div class="galaxy-dust" id="galaxyDust"></div>
+      <div class="scene-content">
+        <p class="eyebrow">PRIMERA PARTE · NUESTRO UNIVERSO</p>
+        <h2>Todo empezó con<br><em>un pequeño destello.</em></h2>
+        <p>Y de alguna manera, terminó convirtiéndose en algo inmenso.</p>
+        <button class="primary-btn" data-next="stars">Seguir explorando <span>✦</span></button>
+      </div>
+    </section>
+
+    <section class="scene knitted" id="stars">
+      <div class="scene-content">
+        <p class="eyebrow">SEGUNDA PARTE · PEQUEÑAS COSAS</p>
+        <h2>Hay tantas cosas<br>que <em>amo de ti.</em></h2>
+        <p>Toca las estrellas para descubrir algunas.</p>
+        <div class="knit-stars" id="knitStars">
+          <button class="knit-star" data-message="Tu risa. Tiene una forma muy tuya de hacer que todo se sienta más bonito." aria-label="Descubrir mensaje 1">✦</button>
+          <button class="knit-star" data-message="Me encanta escucharte hablar de lo que te emociona. Podría escucharte durante horas." aria-label="Descubrir mensaje 2">✦</button>
+          <button class="knit-star" data-message="Amo tus ocurrencias y esa manera tan tuya de joderme. Sí, incluso cuando eres un demonio." aria-label="Descubrir mensaje 3">✦</button>
+          <button class="knit-star" data-message="Me gusta conocerte en cada versión: cuando estás feliz, emocionado, tranquilo o simplemente siendo tú." aria-label="Descubrir mensaje 4">✦</button>
+          <button class="knit-star" data-message="Tu voz es de mis sonidos favoritos, especialmente cuando me cuentas algo que te interesa." aria-label="Descubrir mensaje 5">✦</button>
+          <button class="knit-star" data-message="Gracias por estos casi tres años de conocernos y por estos tres meses siendo nosotros." aria-label="Descubrir mensaje 6">✦</button>
+        </div>
+        <div class="message-card" id="starMessage" aria-live="polite">Cada estrella guarda algo que quiero decirte. 💙</div>
+        <button class="primary-btn" data-next="letter">Tengo algo más para ti <span>♡</span></button>
+      </div>
+    </section>
+
+    <section class="scene letter-scene" id="letter">
+      <div class="scene-content">
+        <p class="eyebrow">TERCERA PARTE · ALGO PARA LEER</p>
+        <h2>Unas palabras<br><em>para mi persona favorita.</em></h2>
+        <p>Toca el sobre para abrirlo.</p>
+        <button class="envelope-wrap" id="envelope" aria-label="Abrir la carta">
+          <span class="envelope-glow"></span>
+          <span class="letter-paper"><img src="carta.png" alt="Carta de aniversario" onerror="this.style.display='none'; document.getElementById('letterFallback').style.display='grid';"><span id="letterFallback">Aquí irá<br>tu carta 💙<small>Reemplaza carta.png por tu imagen</small></span></span>
+          <span class="envelope-back"></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="moon-seal">☾</span>
+        </button>
+        <p class="microcopy" id="envelopeHint">Con cariño, para ti.</p>
+        <button class="primary-btn" data-next="garden">Continuar <span>✦</span></button>
+      </div>
+    </section>
+
+    <section class="scene garden-scene" id="garden">
+      <div class="scene-content">
+        <p class="eyebrow">CUARTA PARTE · UN JARDÍN PARA TI</p>
+        <h2>Las cosas bonitas<br><em>también florecen.</em></h2>
+        <p>Toca la tierra para hacer crecer nuestro jardín.</p>
+        <div class="garden" id="gardenArea" aria-label="Jardín interactivo">
+          <div class="moon"></div>
+          <div class="hill hill-back"></div><div class="hill hill-front"></div>
+          <div class="soil"></div>
+          <div class="flowers" id="flowers"></div>
+          <button class="soil-tap" id="plantBtn" aria-label="Plantar una flor"></button>
+        </div>
+        <p class="garden-count" id="gardenCount">0 flores han nacido.</p>
+        <button class="primary-btn" data-next="eclipse">Ver el último cielo <span>☾</span></button>
+      </div>
+    </section>
+
+    <section class="scene eclipse-scene" id="eclipse">
+      <div class="eclipse-sky">
+        <div class="eclipse-halo"></div><div class="eclipse-disc"></div>
+        <div class="eclipse-stars" id="eclipseStars"></div>
+      </div>
+      <div class="eclipse-copy">
+        <p class="eyebrow">18 DE NOVIEMBRE · TRES MESES</p>
+        <h2>TE AMO</h2>
+        <p>Felices tres meses, mi dulce sueño.</p>
+        <span class="forever">Y qué bonito seguir coincidiendo contigo. 💙</span>
+        <button class="restart-btn" id="restartBtn">Volver a recorrer nuestro universo ↺</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="messageModal" role="dialog" aria-modal="true" aria-labelledby="modalText">
+    <div class="modal-card"><button class="modal-close" id="modalClose" aria-label="Cerrar">×</button><span class="modal-star">✦</span><p id="modalText"></p></div>
+  </div>
+  <div class="letter-viewer" id="letterViewer" role="dialog" aria-modal="true" aria-label="Carta completa">
+    <button class="letter-viewer-close" id="letterViewerClose" type="button" aria-label="Cerrar carta">×</button>
+    <span class="letter-viewer-hint">DESLIZA PARA LEER TODA LA CARTA</span>
+    <img src="carta.png" alt="Carta completa de aniversario">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
